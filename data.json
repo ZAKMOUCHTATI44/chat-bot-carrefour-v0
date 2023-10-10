@@ -1,0 +1,22 @@
+[
+    {
+        "magasin":"VELODROME",
+        "name":"Carrefour Gourmet",
+        "adresse":"Boulevard Abdelatif Benkaddour et, Av. Ahmed Charci, Casablanca 20250",
+        "lattitude":"-7.6461456",
+        "longtitude":"33.590783"
+    },
+    {
+        "magasin":"ZAERS",
+        "name":"Carrefour Market Gourmet Rabat Zaërs",
+        "adresse":"KM 3, 5 Av. Mohamed VI, Rabat 10190",
+        "lattitude":"-  6.8292176",
+        "longtitude":"33.9744012"
+    },
+    {
+        "name":"Carrefour Gourmet",
+        "adresse":"Boulevard Abdelatif Benkaddour et, Av. Ahmed Charci, Casablanca 20250",
+        "lattitude":"-7.6461456",
+        "longtitude":"33.590783"
+    }
+]
