@@ -171,6 +171,8 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `from` varchar(50) DEFAULT NULL,
   `type` varchar(50) DEFAULT NULL,
   `body` longtext DEFAULT NULL,
+   `latitude` decimal(20,6) DEFAULT NULL,
+  `longitude` decimal(20,6) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

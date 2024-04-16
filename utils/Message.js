@@ -7,7 +7,7 @@ exports.sendMessage = (data) => {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
-          'Authorization': 'Bearer ' + "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODMwMzg4MTEsImV4cCI6MjU0NzAzODgxMSwianRpIjoiYVNrRjJYVTV6TnkxIiwiYXBwbGljYXRpb25faWQiOiI3MmQyOTAyNi1mZWZhLTQzMGItYWJmYy01YTNhYmZhMzQ3NjIiLCJzdWIiOiIiLCJhY2wiOiIifQ.SVyEPu5w652cABhjd64rT1ZqY35Hsw9cOn5HS-7WhLTok4W75uKRLxF_ZozWy_8_8PntyPmWsaAITLRsdhlY0dwD1LKHtxHBWWm4LWQhw2qViPvSvRLXfhsNhy3b8SebfFidK8XjbTZG-49hpgiOr-rt6u-iprhr-5xy_g27tEoy4qmrxAbLDCHZ5hU7gxaVWdIipnXArz--zt7Ar5LVwwF_ErTZntHdaBEPHM-SGpVQXF_av9ZxepW6-U-i4TgiWD9AFdoYwtTNeyc0Xr-VdCxef4mkhUfoOvDhLJu_vAnvCWHiVQypSKpHoznRzp5amC0fLyinT7f7YF9UkacN0g"
+          'Authorization': 'Bearer ' + process.env.ACCESS_TOKEM
         }
     };
     axios.post('https://api.nexmo.com/v1/messages', data, config)
@@ -76,7 +76,6 @@ exports.getLastMessage=(callback) => {
     connection.query(req,(error,results) => {
         if(error) console.log(error)
         callback(results[0])
-
     })
 } 
 

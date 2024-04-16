@@ -27,7 +27,6 @@ app.post('/chat-bot',async (req,res)=> {
   }
   getLastMessage((lastMessage)=> {
     if(lastMessage.body === "option5" && lastMessage.from === message.from && Math.floor((new Date() - lastMessage?.created_at ) / 300 )) {
-
       getResponnseTicket(message,({text,lang}) => {
 
         sendMessage({...option,"message_type": "text","text": text})
@@ -86,7 +85,7 @@ app.post('/chat-bot',async (req,res)=> {
           }else if(id.includes('pdf'))  {
 
             sendCatalogue(message.from,id.replace('pdf',''),description,({button,lang}) => {
-              const media="http://164.92.133.78:3000/Nos%20Catalogues%20-%20Carrefour%20Market.pdf"
+              const media="http://162.243.168.176:3000/Nos%20Catalogues%20-%20Carrefour%20Market.pdf"
               // sendMessage({...option,"message_type": "file","file": {"url": media}})
               sendMessage({...option,"message_type": "file","file": {"url": media,caption:"Nos Catalogues - Carrefour Market.pdf"}})
               
@@ -269,7 +268,6 @@ app.post('/chat-bot',async (req,res)=> {
         case "unsupported":
           sendMessage({...option,"message_type": "custom","custom": listOptions('fr')})  
         break;
-
         default:
           sendMessage({...option,"message_type": "custom","custom": welcomeMessage()})
         break;
