@@ -15,7 +15,12 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-app.post('/chat-bot',async (req,res)=> {
+
+app.get("/api-chat-bot",(req,res) => {
+    res.send("HELLO WORLD ");
+})
+
+app.post('/api-chat-bot',async (req,res)=> {
   let message  = req.body
 
   console.log(message)
