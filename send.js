@@ -90,7 +90,9 @@ app.post('/api-chat-bot',async (req,res)=> {
           }else if(id.includes('pdf'))  {
 
             sendCatalogue(message.from,id.replace('pdf',''),description,({button,lang}) => {
-              const media="http://162.243.168.176:3000/Nos%20Catalogues%20-%20Carrefour%20Market.pdf"
+
+              http://3.83.151.213/api-chat-bot/Nos%20Catalogues%20-%20Carrefour%20Market.pdf
+              const media="./public/Nos Catalogues - Carrefour Market.pdf"
               // sendMessage({...option,"message_type": "file","file": {"url": media}})
               sendMessage({...option,"message_type": "file","file": {"url": media,caption:"Nos Catalogues - Carrefour Market.pdf"}})
               
