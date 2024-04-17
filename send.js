@@ -91,7 +91,7 @@ app.post('/api-chat-bot',async (req,res)=> {
 
             sendCatalogue(message.from,id.replace('pdf',''),description,({button,lang}) => {
 
-              const media="./public/Nos Catalogues - Carrefour Market.pdf"
+              const media="http://3.83.151.213/pdf/Nos%20Catalogues%20-%20Carrefour%20Market.pdf"
               // sendMessage({...option,"message_type": "file","file": {"url": media}})
               sendMessage({...option,"message_type": "file","file": {"url": media,caption:"Nos Catalogues - Carrefour Market.pdf"}})
               
